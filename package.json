@@ -1,0 +1,44 @@
+{
+  "name": "resty-app",
+  "version": "1.0.0",
+  "description": "This is API testing application, similar to Postman. This app uses React to build User Interfaces.",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpiao/RESTy.git"
+  },
+  "keywords": ["React", "Props and States"],
+  "author": "Wenhao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wpiao/RESTy/issues"
+  },
+  "homepage": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1"
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from './Form.jsx';
+import Results from './Results.jsx';
 const axios = require('axios');
 
 class App extends React.Component {
@@ -9,7 +10,8 @@ class App extends React.Component {
       method: 'get',
       url: '',
       count: 0,
-      results: []
+      body: {},
+      headers: {}
     };
   }
 
@@ -31,14 +33,24 @@ class App extends React.Component {
       method: this.state.method,
       url: this.state.url
     })
-      .then(response => console.log(response))
+      .then(response => {
+        this.setState({
+          count: response.data.count,
+          headers: { "Headers": response.headers },
+          body: { "Data": response.data }
+        })
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   render() {
-    const { url } = this.state;
+    const { url, count, headers, body } = this.state;
     return (
       <React.Fragment>
         <Form url={url} handleSubmit={this.handleSubmit} handleChange={this.handleChange} handleClick={this.handleClick} />
+        <Results count={count} headers={headers} body={body} />
       </React.Fragment>
     )
   }

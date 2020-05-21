@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/wpiao/RESTy.git"
   },
-  "keywords": ["React", "Props and States"],
+  "keywords": [
+    "React",
+    "Props and States"
+  ],
   "author": "Wenhao",
   "license": "ISC",
   "bugs": {
@@ -20,6 +23,7 @@
   },
   "homepage": "",
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

@@ -6,13 +6,16 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom"
+    "test": "react-scripts test --env=jsdom --verbose"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wpiao/RESTy.git"
   },
-  "keywords": ["React", "Props and States"],
+  "keywords": [
+    "React",
+    "Props and States"
+  ],
   "author": "Wenhao",
   "license": "ISC",
   "bugs": {
@@ -20,14 +23,17 @@
   },
   "homepage": "",
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-json-view": "^1.19.1",
     "react-scripts": "^3.4.1"
   },
   "devDependencies": {
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2"
+    "enzyme-adapter-react-16": "^1.15.2",
+    "react-test-renderer": "^16.13.1"
   },
   "browserslist": {
     "production": [

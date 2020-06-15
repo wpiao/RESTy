@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/github.io/RESTy/static/js/main.fe2864cd.chunk.js",
-    "main.js.map": "/github.io/RESTy/static/js/main.fe2864cd.chunk.js.map",
-    "runtime-main.js": "/github.io/RESTy/static/js/runtime-main.016e3be2.js",
-    "runtime-main.js.map": "/github.io/RESTy/static/js/runtime-main.016e3be2.js.map",
-    "static/js/2.84672c6c.chunk.js": "/github.io/RESTy/static/js/2.84672c6c.chunk.js",
-    "static/js/2.84672c6c.chunk.js.map": "/github.io/RESTy/static/js/2.84672c6c.chunk.js.map",
-    "index.html": "/github.io/RESTy/index.html",
-    "precache-manifest.9abb780ee5e7d3ab54e031a142eb2f4f.js": "/github.io/RESTy/precache-manifest.9abb780ee5e7d3ab54e031a142eb2f4f.js",
-    "service-worker.js": "/github.io/RESTy/service-worker.js",
-    "static/js/2.84672c6c.chunk.js.LICENSE.txt": "/github.io/RESTy/static/js/2.84672c6c.chunk.js.LICENSE.txt"
+    "main.js": "/RESTy/static/js/main.fe2864cd.chunk.js",
+    "main.js.map": "/RESTy/static/js/main.fe2864cd.chunk.js.map",
+    "runtime-main.js": "/RESTy/static/js/runtime-main.42cd7bf2.js",
+    "runtime-main.js.map": "/RESTy/static/js/runtime-main.42cd7bf2.js.map",
+    "static/js/2.84672c6c.chunk.js": "/RESTy/static/js/2.84672c6c.chunk.js",
+    "static/js/2.84672c6c.chunk.js.map": "/RESTy/static/js/2.84672c6c.chunk.js.map",
+    "index.html": "/RESTy/index.html",
+    "precache-manifest.086bc67de1446b50447f8c53b65f4aa3.js": "/RESTy/precache-manifest.086bc67de1446b50447f8c53b65f4aa3.js",
+    "service-worker.js": "/RESTy/service-worker.js",
+    "static/js/2.84672c6c.chunk.js.LICENSE.txt": "/RESTy/static/js/2.84672c6c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.016e3be2.js",
+    "static/js/runtime-main.42cd7bf2.js",
     "static/js/2.84672c6c.chunk.js",
     "static/js/main.fe2864cd.chunk.js"
   ]

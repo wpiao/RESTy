@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> should render correctly 1`] = `
+<form>
+  <h1
+    className="header"
+  >
+    RESTy
+  </h1>
+  <input
+    type="text"
+  />
+  <button
+    value="get"
+  >
+    GET
+  </button>
+  <button
+    value="post"
+  >
+    POST
+  </button>
+  <button
+    value="put"
+  >
+    PUT
+  </button>
+  <button
+    value="patch"
+  >
+    PATCH
+  </button>
+  <button
+    value="delete"
+  >
+    DELETE
+  </button>
+  <input
+    type="submit"
+    value="Go!"
+  />
+</form>
+`;

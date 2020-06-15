@@ -9,3 +9,4 @@ This is API testing application, similar to Postman. This app uses React to buil
 3. Run command `npm test` to test the app
 4. Run command `npm run build` to build files for deployment
 5. Run command `npm run deploy` to deploy the app in Github pages
+6. Deployed app url: `https://wpiao.github.io/RESTy`

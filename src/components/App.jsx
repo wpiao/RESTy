@@ -1,6 +1,11 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+
 import Form from './Form.js';
 import Results from './Results.jsx';
+import Header from './Header.js';
+import History from './History.jsx';
+import { If, Then, Else } from './Condition.jsx';
 const axios = require('axios');
 
 class App extends React.Component {
@@ -11,48 +16,89 @@ class App extends React.Component {
       url: '',
       count: 0,
       body: {},
-      headers: {}
+      headers: {},
+      history: [],
+      loading: false,
     };
   }
 
   // add some functions
-  handleChange = e => {
+  handleChange = (e) => {
     const url = e.target.value;
     this.setState({ url });
-  }
+  };
 
-  handleClick = e => {
-    e.preventDefault();
+  handleClick = (e) => {
     const method = e.target.value;
     this.setState({ method });
-  }
+  };
 
-  handleSubmit = e => {
+  handleGo = (e) => {
+    const { history, url, loading } = this.state;
+    this.setState({
+      loading: !loading,
+      history: [...history, url].reverse(),
+    });
+  };
+
+  handleSubmit = (e) => {
     e.preventDefault();
     axios({
       method: this.state.method,
-      url: this.state.url
+      url: this.state.url,
     })
-      .then(response => {
+      .then((response) => {
         this.setState({
+          error: '',
           count: response.data.count,
-          headers: { "Headers": response.headers },
-          body: { "Data": response.data }
-        })
+          headers: { Headers: response.headers },
+          body: { Data: response.data },
+          loading: false,
+          url: '',
+        });
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
+        // this.setState({ error: error, url: '', loading: false });
       });
-  }
+  };
 
   render() {
-    const { url, count, headers, body } = this.state;
+    const { url, count, headers, body, history, loading } = this.state;
     return (
       <React.Fragment>
-        <Form url={url} handleSubmit={this.handleSubmit} handleChange={this.handleChange} handleClick={this.handleClick} />
-        <Results count={count} headers={headers} body={body} />
+        <Header />
+        <Route exact path="/">
+          <Form
+            url={url}
+            handleSubmit={this.handleSubmit}
+            handleChange={this.handleChange}
+            handleClick={this.handleClick}
+            handleGo={this.handleGo}
+          />
+          <If condition={!loading}>
+            <Then>
+              <If condition={Object.keys(body).length !== 0}>
+                <Then>
+                  <Results count={count} headers={headers} body={body} />
+                </Then>
+              </If>
+            </Then>
+            <Else>
+              <img
+                src="https://media.giphy.com/media/y1ZBcOGOOtlpC/giphy.gif"
+                alt="loading"
+                width="300px"
+                height="300px"
+              />
+            </Else>
+          </If>
+        </Route>
+        <Route exact path="/history">
+          <History history={history} />
+        </Route>
       </React.Fragment>
-    )
+    );
   }
 }
 

@@ -68,7 +68,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <Route exact path="/">
+        <Route exact path="/RESTy">
           <Form
             url={url}
             handleSubmit={this.handleSubmit}
@@ -94,7 +94,7 @@ class App extends React.Component {
             </Else>
           </If>
         </Route>
-        <Route exact path="/history">
+        <Route exact path="/RESTy/history">
           <History history={history} />
         </Route>
       </React.Fragment>

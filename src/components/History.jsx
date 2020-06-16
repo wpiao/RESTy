@@ -8,7 +8,7 @@ const History = ({ history }) => {
         return (
           <li key={index}>
             {url}
-            <Link to="/">
+            <Link to="/RESTy">
               <button>Go!</button>
             </Link>
           </li>

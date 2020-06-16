@@ -2,11 +2,13 @@
   "name": "resty-app",
   "version": "1.0.0",
   "description": "This is API testing application, similar to Postman. This app uses React to build User Interfaces.",
+  "homepage": "https://wpiao.github.io/RESTy",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "repository": {
@@ -22,7 +24,6 @@
   "bugs": {
     "url": "https://github.com/wpiao/RESTy/issues"
   },
-  "homepage": "https://wpiao.github.io/RESTy",
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",
